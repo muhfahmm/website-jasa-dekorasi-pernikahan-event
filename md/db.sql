@@ -45,18 +45,7 @@ CREATE TABLE IF NOT EXISTS tb_testimoni (
     foto_klien VARCHAR(255) NULL
 );
 
--- 6. Tabel Gambar Produk
-CREATE TABLE IF NOT EXISTS tb_gambar_produk (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_paket INT NOT NULL,
-    nama_gambar VARCHAR(255) NOT NULL,
-    path_gambar VARCHAR(255) NOT NULL,
-    urutan INT DEFAULT 1,
-    tanggal_upload TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_paket) REFERENCES tb_paket(id) ON DELETE CASCADE
-);
-
--- 7. Tabel Kontak / Pesan Masuk
+-- 6. Tabel Kontak / Pesan Masuk
 CREATE TABLE IF NOT EXISTS tb_pesan (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama_pengirim VARCHAR(100) NOT NULL,
