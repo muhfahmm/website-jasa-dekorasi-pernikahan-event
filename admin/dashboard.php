@@ -22,7 +22,9 @@ $current_page = $_GET['page'] ?? 'dashboard';
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .nav-link.active {
-            @apply border-l-4 border-rose-600 bg-rose-50 text-gray-900;
+            border-left: 4px solid #e91e63;
+            background-color: #1e293b;
+            color: #f1f5f9;
         }
     </style>
 </head>

@@ -53,7 +53,7 @@ $admin_username = $_SESSION['admin_username'] ?? 'Admin';
             $link = ($page === 'dashboard') ? 'dashboard.php' : 'dashboard.php?page=' . $page;
         ?>
             <a href="<?php echo $link; ?>" 
-               class="nav-link flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors <?php echo $is_active ? 'active border-l-4 border-rose-600 bg-rose-50 text-gray-900' : ''; ?>">
+               class="nav-link flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors <?php echo $is_active ? 'active' : ''; ?>">
                 <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<?php echo $item['icon']; ?>"></path>
                 </svg>
