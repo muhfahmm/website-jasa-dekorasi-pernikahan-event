@@ -4,8 +4,15 @@
  * Mengelola session admin
  */
 
-// Start session jika belum dimulai
+// Configure session settings sebelum start
 if (session_status() === PHP_SESSION_NONE) {
+    // Set cookie path dan domain
+    ini_set('session.cookie_path', '/');
+    ini_set('session.cookie_domain', '');
+    ini_set('session.cookie_lifetime', 86400); // 24 jam
+    ini_set('session.gc_maxlifetime', 86400);
+    
+    // Start session
     session_start();
 }
 
@@ -40,7 +47,7 @@ function destroySession() {
  */
 function requireLogin() {
     if (!isLoggedIn()) {
-        header('Location: /project-client-website-php/website_jasa/1_website_jasa_dekorasi_pernikahan_event/admin/auth/login.php');
+        header('Location: ../auth/login.php');
         exit();
     }
 }
@@ -50,7 +57,7 @@ function requireLogin() {
  */
 function redirectIfLoggedIn() {
     if (isLoggedIn()) {
-        header('Location: /project-client-website-php/website_jasa/1_website_jasa_dekorasi_pernikahan_event/admin/dashboard.php');
+        header('Location: ../dashboard.php');
         exit();
     }
 }
