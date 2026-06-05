@@ -4,7 +4,7 @@
  * Halaman overview dashboard dengan statistik
  */
 
-require_once '../../config.php';
+require_once __DIR__ . '/../../config.php';
 ?>
 
 <!-- Welcome Card -->

@@ -4,7 +4,7 @@
  * Halaman untuk melihat pesan masuk dari pelanggan
  */
 
-require_once '../../config.php';
+require_once __DIR__ . '/../../config.php';
 
 $error = '';
 $success = '';

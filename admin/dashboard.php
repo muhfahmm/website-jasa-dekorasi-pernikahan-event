@@ -52,60 +52,25 @@ $current_page = $_GET['page'] ?? 'dashboard';
             <!-- Navigation Menu -->
             <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
                 <!-- Dashboard -->
-                <a href="?page=dashboard" class="nav-link active flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 16l4-4m0 0l4 4m-4-4V5"></path>
-                    </svg>
-                    Dashboard
-                </a>
+                <?php include 'sidebar/dashboard.php'; ?>
 
                 <!-- Kategori -->
-                <a href="?page=kategori" class="nav-link flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-                    </svg>
-                    Kategori
-                </a>
-
+                <?php include 'sidebar/kategori.php'; ?>
+                
                 <!-- Paket -->
-                <a href="?page=paket" class="nav-link flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m0 0l8 4m-8-4v10l8 4m0-10l8 4m0-10v10l8-4M3 12a9 9 0 0118 0m0 0a9 9 0 01-18 0m0 0a8.999 8.999 0 0118 0"></path>
-                    </svg>
-                    Paket Dekorasi
-                </a>
+                <?php include 'sidebar/paket.php'; ?>
 
                 <!-- Gambar Produk -->
-                <a href="?page=gambar" class="nav-link flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                    Gambar Produk
-                </a>
+                <?php include 'sidebar/gambar.php'; ?>
 
                 <!-- Portofolio -->
-                <a href="?page=portofolio" class="nav-link flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-                    </svg>
-                    Portofolio
-                </a>
+                <?php include 'sidebar/portofolio.php'; ?>
 
                 <!-- Testimoni -->
-                <a href="?page=testimoni" class="nav-link flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-                    </svg>
-                    Testimoni
-                </a>
+                <?php include 'sidebar/testimoni.php'; ?>
 
                 <!-- Pesan Masuk -->
-                <a href="?page=pesan" class="nav-link flex items-center px-4 py-3 rounded-lg text-slate-100 hover:bg-slate-800 transition-colors">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
-                    Pesan Masuk
-                </a>
+                <?php include 'sidebar/pesan.php'; ?>
             </nav>
 
             <!-- Divider -->
