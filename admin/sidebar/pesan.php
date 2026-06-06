@@ -7,35 +7,8 @@
 $error = '';
 $success = '';
 
-// Proses hapus pesan
-if (isset($_GET['delete'])) {
-    $id = intval($_GET['delete']);
-    $stmt = $conn->prepare("DELETE FROM tb_pesan WHERE id = ?");
-    $stmt->bind_param("i", $id);
-
-    if ($stmt->execute()) {
-        $success = 'Pesan berhasil dihapus';
-    } else {
-        $error = 'Gagal menghapus pesan';
-    }
-    $stmt->close();
-    
-    // Redirect untuk clear URL
-    header("Location: dashboard.php?page=pesan");
-    exit;
-}
-
-// Proses tandai sebagai sudah dibaca
-if (isset($_GET['mark_read'])) {
-    $id = intval($_GET['mark_read']);
-    $stmt = $conn->prepare("UPDATE tb_pesan SET status_baca = 'sudah' WHERE id = ?");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    $stmt->close();
-    
-    header("Location: dashboard.php?page=pesan");
-    exit;
-}
+// NOTE: Header redirects harus dilakukan di dashboard.php SEBELUM include sidebar
+// Jadi kita hanya handle di sini untuk reference, tapi redirect dilakukan di dashboard
 
 // Get all pesan
 $pesan_list = $conn->query("SELECT * FROM tb_pesan ORDER BY tanggal_kirim DESC");
