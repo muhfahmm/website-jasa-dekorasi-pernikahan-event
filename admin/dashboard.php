@@ -17,7 +17,7 @@ $current_page = $_GET['page'] ?? 'dashboard';
 // Hapus pesan
 if (isset($_GET['delete']) && $current_page === 'pesan') {
     $id = intval($_GET['delete']);
-    $stmt = $GLOBALS['conn']->prepare("DELETE FROM tb_pesan WHERE id = ?");
+    $stmt = $conn->prepare("DELETE FROM tb_pesan WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $stmt->close();
@@ -28,7 +28,7 @@ if (isset($_GET['delete']) && $current_page === 'pesan') {
 // Tandai pesan sebagai dibaca
 if (isset($_GET['mark_read']) && $current_page === 'pesan') {
     $id = intval($_GET['mark_read']);
-    $stmt = $GLOBALS['conn']->prepare("UPDATE tb_pesan SET status_baca = 'sudah' WHERE id = ?");
+    $stmt = $conn->prepare("UPDATE tb_pesan SET status_baca = 'sudah' WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $stmt->close();
@@ -55,7 +55,7 @@ if (isset($_GET['mark_read']) && $current_page === 'pesan') {
 <body class="bg-stone-50">
     <div class="flex h-screen">
         <!-- Include Sidebar (Reusable Component) -->
-        <?php $conn = $GLOBALS['conn']; include 'includes/sidebar.php'; ?>
+        <?php include 'includes/sidebar.php'; ?>
 
         <!-- Main Content -->
         <main class="flex-1 overflow-y-auto">
