@@ -104,9 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <a href="#testimoni" class="text-gray-700 hover:text-rose-600 transition font-medium">Testimoni</a>
                     <a href="#kontak" class="text-gray-700 hover:text-rose-600 transition font-medium">Kontak</a>
                 </div>
-                <a href="admin/" class="bg-rose-600 text-white px-4 py-2 rounded-lg hover:bg-rose-700 transition text-sm font-medium">
-                    Login Admin
-                </a>
             </div>
         </div>
     </nav>
